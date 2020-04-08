@@ -1,0 +1,8 @@
+{
+  "name": "Live Corona Virus Tracker",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}

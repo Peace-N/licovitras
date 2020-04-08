@@ -1,0 +1,53 @@
+ion-content ion-toolbar {
+  --background: translucent;
+}
+
+.small-text-no-margin {
+  font-size: 10px;
+  color:grey;
+  margin-bottom:0;
+  margin-top:0;
+  margin-left:30%;
+}
+
+.small-text-no-margin-flag {
+  font-size: 10px;
+  color:grey;
+  margin-bottom:0;
+  margin-top:0;
+}
+
+.flag {
+  width:70%;
+  max-height: 30px;
+  margin-top:2px;
+}
+
+.row-color {
+  background:#ededed;
+  border-bottom: 1px solid #ccc;
+}
+
+.fancy-button {
+  --background: #ededed;
+  --box-shadow: none;
+
+}
+.danger {
+  color:red;
+  font-weight:bold;
+}
+
+.green {
+  color:green;
+  font-weight:bold;
+}
+
+.black {
+  color:black;
+  font-weight:bold;
+}
+
+#megatron {
+  max-width:100%;
+  height: 340px;}

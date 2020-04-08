@@ -1,0 +1,53 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="medium">
+    <ion-title>
+      LICOVITRAS
+    </ion-title>
+  </ion-toolbar>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/tab2"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Return Back</ion-title>
+  </ion-toolbar>
+  <ion-toolbar color="primary">
+    <ion-title>Select Your Age</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-radio-group (ionChange)="fishyHandler($event)" (ionSelect)="goFish($event)"
+    (ionBlur)="leaveFish($event)">
+      <ion-list-header>
+        <ion-label>Age Screening</ion-label>
+      </ion-list-header>
+
+      <ion-item>
+        <ion-label>Under 18 years</ion-label>
+        <ion-radio slot="start" value="18" checked></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Between 18 and 64 years</ion-label>
+        <ion-radio slot="start" value="65"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Above 65 years</ion-label>
+        <ion-radio slot="start" value="65"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+  </ion-list>
+  <ion-card color="secondary">
+    <ion-card-header>
+        <ion-card-subtitle>Let's continue with the test</ion-card-subtitle>
+        <ion-card-title>Wre are almost there</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+                  <ion-button (click)="passNavigator()" size="large" expand="full" class="fancy-button">
+                    CONTINUE ..
+                  </ion-button>
+    </ion-card-content>
+</ion-card>
+</ion-content>

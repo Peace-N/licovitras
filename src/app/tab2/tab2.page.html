@@ -1,0 +1,41 @@
+<ion-header [translucent]="true">
+    <ion-toolbar color="medium">
+        <ion-title>
+            LICOVITRAS
+        </ion-title>
+    </ion-toolbar>
+    <ion-toolbar color="primary">
+        <ion-title>COVID-19 Screening</ion-title>
+    </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <ion-card color="tertiary">
+    <ion-card-header>
+      <ion-card-subtitle>For a more accurate result we need to ask you about travel, and contact you’ve had with others.</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <h1><ion-icon size="large" color="warning" name="help-circle-outline"></ion-icon></h1>
+      <h3>Before We Begin, if you have any of the below symptons please call:</h3>
+      <h1>0800 029 999</h1>
+      <ul>
+       <li>Constant chest pain or pressure</li>
+        <li>Extreme difficulty breathing</li>
+        <li>Severe, constant dizziness or lightheadedness</li>
+        <li>Slurred speech</li>
+        <li>Difficulty waking up</li>
+        <li>A Dry Cough</li>
+      </ul>
+    </ion-card-content>
+  </ion-card>
+    <ion-card color="secondary">
+        <ion-card-header>
+            <ion-card-subtitle>Let's care for each other.</ion-card-subtitle>
+            <ion-card-title>Let's Stop the Spread and Beat it together .</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+                      <ion-button  routerLink="/age" routerDirection="forward" size="large" expand="full" class="fancy-button">
+                        BEGIN SCREENING
+                      </ion-button>
+        </ion-card-content>
+    </ion-card>
+</ion-content>

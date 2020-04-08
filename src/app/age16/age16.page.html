@@ -1,0 +1,147 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="medium">
+      <ion-title>
+          LICOVITRAS
+      </ion-title>
+  </ion-toolbar>
+  <ion-toolbar color="primary">
+      <ion-title>COVID-19 Screening</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" *ngIf="age == 18">
+<ion-card color="tertiary">
+  <ion-card-header>
+    <ion-card-subtitle>Thank you for taking time on the tool.</ion-card-subtitle>
+  </ion-card-header>
+  <ion-card-content>
+    <h1><ion-icon size="large" color="warning" name="help-circle-outline"></ion-icon></h1>
+    <h1>This screening tool is intended for people who are at least 18 years old</h1>
+  
+  </ion-card-content>
+</ion-card>
+  <ion-card color="success">
+      <ion-card-header>
+          <ion-card-subtitle>Let's care for each other.</ion-card-subtitle>
+          <ion-card-title>Let's Stop the Spread and Beat it together .</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+                    <!-- <ion-button  routerLink="/age" routerDirection="forward" size="large" expand="full" class="fancy-button">
+                      BEGIN SCREENING
+                    </ion-button> -->
+      </ion-card-content>
+  </ion-card>
+</ion-content>
+
+<ion-content [fullscreen]="true" *ngIf="age == 65">
+  <ion-list>
+    <ion-list-header>Are you experiencing any of these symptoms?</ion-list-header>
+      <ion-item>
+        <ion-label>Fever, Chils or Sweating</ion-label>
+        <ion-checkbox color="danger" slot="start"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-checkbox color="danger"  slot="start"></ion-checkbox>
+        <ion-label>Dificulty Breathing (not severe)</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-checkbox color="danger" slot="start"></ion-checkbox>
+        <ion-label>New or Worsening cough</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-checkbox color="danger"  slot="start"></ion-checkbox>
+        <ion-label>Sore throat</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-checkbox color="danger" slot="start"></ion-checkbox>
+        <ion-label>Arching throughout the body</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-checkbox color="danger"  slot="start"></ion-checkbox>
+        <ion-label>Cersei Lannister</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-checkbox color="danger"  slot="start"></ion-checkbox>
+        <ion-label>None of the Above</ion-label>
+      </ion-item>
+      <ion-list-header>Do you suffer from any of this sicknesses?</ion-list-header>
+      <ion-item>
+        <ion-checkbox color="danger" slot="start"></ion-checkbox>
+        <ion-label>Asthma or Chronic Lung Disease</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-checkbox color="danger"  slot="start"></ion-checkbox>
+        <ion-label>Pregnancy</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-checkbox color="danger" slot="start"></ion-checkbox>
+        <ion-label>Diabetes with Complications</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-checkbox color="danger" slot="start"></ion-checkbox>
+        <ion-label>Diseases or conditions that make it harder to breathe</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-checkbox color="danger" slot="start"></ion-checkbox>
+        <ion-label>Kidney Failure that needs Dialysis</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-checkbox color="danger" slot="start"></ion-checkbox>
+        <ion-label>Cirrhosis of the Liver</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-checkbox color="danger" slot="start"></ion-checkbox>
+        <ion-label>Weakend Immune System</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-checkbox color="danger" slot="start"></ion-checkbox>
+        <ion-label>Congestive heart failure</ion-label>
+      </ion-item>
+      <ion-list-header>In the last 14 days, have you been in an area where COVID-19 is widespread?
+      </ion-list-header>
+      <ion-item>
+        <ion-checkbox color="danger" slot="start"></ion-checkbox>
+        <ion-label>I live in an area where COVID-19 is widespread</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-checkbox color="danger" slot="start"></ion-checkbox>
+        <ion-label>I have visited an area where COVID-19 is widespread</ion-label>
+      </ion-item>
+      <ion-list-header>In the last 14 days, what is your exposure to others who are known to have COVID-19
+      </ion-list-header>
+      <ion-item>
+        <ion-checkbox color="danger" slot="start"></ion-checkbox>
+        <ion-label>I live with someone who have covid 19</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-checkbox color="danger" slot="start"></ion-checkbox>
+        <ion-label>I have had close contact with someone who have covid 19</ion-label>
+      </ion-item>
+      <ion-list-header>In the last 14 days, what is your exposure to others who are known to have COVID-19
+      </ion-list-header>
+      <ion-item>
+        <ion-checkbox color="danger" slot="start"></ion-checkbox>
+        <ion-label>I live in a long term care facility</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-checkbox color="danger" slot="start"></ion-checkbox>
+        <ion-label>I have worked in a hospital or care facility in the past 14 days</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-checkbox color="danger" slot="start"></ion-checkbox>
+        <ion-label>I plan to work in a hospital or other care facility in the next 14 days</ion-label>
+      </ion-item>
+    </ion-list>
+
+  <ion-card color="secondary">
+    <ion-card-header>
+        <ion-card-subtitle>Just a few more details needed and you get your screen results</ion-card-subtitle>
+        <ion-card-title>Wre are almost there</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+                  <ion-button (click)="getResults()" size="large" expand="full" class="fancy-button">
+                    CONTINUE ..
+                  </ion-button>
+    </ion-card-content>
+</ion-card>
+</ion-content>
